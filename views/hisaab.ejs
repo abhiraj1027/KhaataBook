@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhaataBook</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <main class="px-8 py-5">
+        <nav class="flex items-center justify-between ">
+            <h1 class="text-2xl font-thin ">Khaata<span class="text-blue-500 font-bold ">BOOK</span></h1>
+            <section class="flex gap-7 items-center">
+                <a href="">Home</a>
+                <a class="text-blue-500 px-5 py-2 border border-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition ease-in-out duration-300 text-sm" href="">Create Hisab Kitab</a>
+            </section>
+        </nav>
+        <div class="mt-20">
+            <h1 class="text-2xl">Khaata : <span class="text-blue-500"><%=fileName  %></span></h1>
+
+            <section>
+                <p class="my-4 text-l"><%= fileContent %></p>
+                <a class="text-slate-400 text-sm font-bold" href="/edit/<%= fileName %>">Edit this Hisaab</a>
+            </section>
+        </div>
+
+    </main>
+</body>
+</html>

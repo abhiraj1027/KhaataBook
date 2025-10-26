@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhaataBook</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <main class="px-8 py-5">
+        <nav class="flex items-center justify-between ">
+            <h1 class="text-2xl font-thin ">Khaata<span class="text-blue-500 font-bold ">BOOK</span></h1>
+            <section class="flex gap-7 items-center">
+                <a href="/">Home</a>
+                <a class="text-blue-500 px-5 py-2 border border-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition ease-in-out duration-300 text-sm" href="/create">Create Hisab Kitab</a>
+            </section>
+        </nav>
+        <div class="mt-20">
+            <h1 class="text-2xl"> New <span class="text-blue-500">Khaata</span></h1>
+                <form class="flex flex-col items-start" action="/createKhaata" method="post">
+                    <textarea name="khaataTitle" class="border border-gray-300 rounded-lg p-2 mt-5 w-1/2 resize-none bg-slate-200" id="" placeholder="shopping ka hisaab , ghar ka kharch..."></textarea>
+                    <textarea name="khaataContent" class="border border-gray-300 rounded-lg p-2 mt-5 w-1/2 h-96 resize-none bg-slate-200" name="" id="" placeholder="write here to edit..."></textarea>
+                    <input class="px-4 py-1 bg-blue-500 text-white rounded-full mt-5" type="submit">
+                </form>
+        </div>
+
+    </main>
+</body>
+</html>

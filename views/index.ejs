@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhaataBook</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <main class="px-8 py-5">
+        <nav class="flex items-center justify-between ">
+            <h1 class="text-2xl font-thin ">Khaata<span class="text-blue-500 font-bold ">BOOK</span></h1>
+            <section class="flex gap-7 items-center">
+                <a href="/">Home</a>
+                <a class="text-blue-500 px-5 py-2 border border-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition ease-in-out duration-300 text-sm" href="/create">Create Hisab Kitab</a>
+            </section>
+        </nav>
+        <div class="mt-20">
+            <h1 class="text-2xl">All <span>Khaata</span></h1>
+
+            <section class="flex gap-5">
+
+                <% if(files.length > 0){ %>
+
+                    <% files.forEach((file)=>{ %>
+                           
+                        
+                        <div class="border bg-blue-500 border-gray-300 rounded-lg p-4 mt-5 hover:shadow-lg transition ease-in-out duration-300 flex items-center w-fit">
+                            <h2 class="text-white"> <%= file.split('.')[0] %> </h2>
+                            <a class="px-1 py-1 bg-white text-blue-500 rounded-full mx-4" href="/view/<%= file %>"><i class="ri-arrow-right-line"></i></a>
+                            
+                            <div class="changes ml-4 flex gap-2 px-2 bg-white rounded-full py-1">
+                                <a class="px-1 bg-yellow-600 text-white rounded-full" href="/edit/<%= file%>"><i class="ri-pencil-fill"></i></a>
+                                <a class="px-1 bg-red-600 text-white rounded-full" href="/delete/<%= file%>"><i class="ri-delete-bin-2-fill"></i></a>
+                            </div>
+                        </div>
+
+
+                    <% }) %>
+
+                <% } else { %>
+                    <h3 class="text-zinc-500 mt-5 text-l">Currently No <span class="text-red-600 text-sm font-bold">KHAATA</span> create a new Khaata to see something</h3>
+                <% } %>
+            </section>
+        </div>
+
+    </main>
+</body>
+</html>
