@@ -15,13 +15,11 @@
 
 ---
 
-## Screenshots
+## Demo
 
-![Dashboard](path/to/dashboard-screenshot.png)  
-*Modern dashboard with summaries and charts.*
+https://github.com/user-attachments/assets/7b07f2f4-a271-4943-a83f-c33a156c7297
 
-![Add Transaction](path/to/add-transaction-screenshot.png)  
-*Quickly add new income or expense records.*
+
 
 ---
 ##  Challenges & Learnings
